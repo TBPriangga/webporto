@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webportofolio/app/sections/main/widgets/_mobile_drawer.dart';
 import 'package:webportofolio/app/sections/main/widgets/_navbar_destkop.dart';
-import 'package:webportofolio/app/sections/main/widgets/body.dart';
+import 'package:webportofolio/app/sections/main/widgets/_body.dart';
 import 'package:webportofolio/core/res/responsive.dart';
 import 'package:webportofolio/widgets/arrow_on_top.dart';
 import '../../../core/providers/drawer_provider.dart';

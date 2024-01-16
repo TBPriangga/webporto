@@ -82,7 +82,7 @@ class _NavbarTabletState extends State<NavbarTablet> {
     return Container(
       color: bgColor,
       padding: EdgeInsets.symmetric(
-          horizontal: Responsive.isTablet(context) ? 10.w : 10, vertical: 10),
+          horizontal: Responsive.isTablet(context) ? 5.w : 10, vertical: 20),
       child: Row(
         children: [
           IconButton(
