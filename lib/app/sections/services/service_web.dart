@@ -7,7 +7,7 @@ import 'package:webportofolio/core/animations/entrance_fader.dart';
 import 'package:webportofolio/core/color/colors.dart';
 
 class Serviceweb extends StatefulWidget {
-  Serviceweb({super.key});
+  const Serviceweb({super.key});
 
   @override
   State<Serviceweb> createState() => _ServicewebState();
@@ -27,11 +27,11 @@ class _ServicewebState extends State<Serviceweb>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _controller.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     return Container(

@@ -13,9 +13,9 @@ class NChecking extends StatelessWidget {
       builder: (context, state) {
         //final scrollProvider = Provider.of<ScrollProvider>(context);
         if (state is ConnectedSucessState) {
-          return MainPage();
+          return const MainPage();
         } else {
-          return MainPage();
+          return const MainPage();
         }
         // return Container();
       },
