@@ -6,14 +6,14 @@ import 'package:webportofolio/app/utils/services_utils.dart';
 import 'package:webportofolio/core/animations/entrance_fader.dart';
 import 'package:webportofolio/core/color/colors.dart';
 
-class Serviceweb extends StatefulWidget {
-  const Serviceweb({super.key});
+class ServiceWeb extends StatefulWidget {
+  const ServiceWeb({super.key});
 
   @override
-  State<Serviceweb> createState() => _ServicewebState();
+  State<ServiceWeb> createState() => _ServiceWebState();
 }
 
-class _ServicewebState extends State<Serviceweb>
+class _ServiceWebState extends State<ServiceWeb>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   List<bool> isHovered = List.generate(4, (index) => false);
@@ -49,12 +49,12 @@ class _ServicewebState extends State<Serviceweb>
           ),
           SizedBox(height: 4.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.w),
+            padding: EdgeInsets.symmetric(horizontal: 25.w),
             child: const Text(
               "Provide Wide Range of Digital Services",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: secondaryColor,
+                color: textColor,
                 fontFamily: 'josefinsans',
                 fontSize: 50.0,
                 fontWeight: FontWeight.w900,
@@ -115,6 +115,8 @@ class _ServicewebState extends State<Serviceweb>
               height: 100.h,
               padding: EdgeInsets.all(5.h),
               decoration: BoxDecoration(
+                border: Border.all(
+                    color: isHovered[index] ? secondaryColor : Colors.white),
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
                 boxShadow: const [
