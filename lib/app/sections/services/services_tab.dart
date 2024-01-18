@@ -78,7 +78,7 @@ class _ServiceTabState extends State<ServiceTab> {
           Container(
             decoration: BoxDecoration(shape: BoxShape.circle, color: bgColor),
             child: Image.asset(
-              ServicesUtils.icon,
+              servicesUtils.icon,
               scale: 2,
             ),
           ),
