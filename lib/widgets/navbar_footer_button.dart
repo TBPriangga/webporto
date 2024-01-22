@@ -24,7 +24,6 @@ class _NavBarFooterButtonState extends State<NavBarFooterButton> {
   @override
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);
-    final screenWidth = MediaQuery.of(context).size.width;
 
     return EntranceFader(
       offset: const Offset(0, -10),

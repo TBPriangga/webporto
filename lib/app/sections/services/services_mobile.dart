@@ -7,7 +7,7 @@ import 'package:webportofolio/app/utils/services_utils.dart';
 import '../../../core/color/colors.dart';
 
 class ServiceMobile extends StatefulWidget {
-  ServiceMobile({super.key});
+  const ServiceMobile({super.key});
 
   @override
   State<ServiceMobile> createState() => _ServiceMobileState();
@@ -22,7 +22,7 @@ class _ServiceMobileState extends State<ServiceMobile> {
       padding: EdgeInsets.only(top: 5.h, left: 5.w, right: 5.w),
       child: Column(
         children: [
-          Text(
+          const Text(
             "My Expertise",
             style: TextStyle(
                 color: secondaryColor,
@@ -30,10 +30,10 @@ class _ServiceMobileState extends State<ServiceMobile> {
                 fontSize: 22.0,
                 fontWeight: FontWeight.w600),
           ),
-          SizedBox(height: 4.h),
+          SizedBox(height: 2.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: Text(
+            padding: EdgeInsets.symmetric(horizontal: 5.w),
+            child: const Text(
               "Provide Wide Range of Digital Services",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -62,7 +62,7 @@ class _ServiceMobileState extends State<ServiceMobile> {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: bgColor,
               spreadRadius: 60,
@@ -75,7 +75,8 @@ class _ServiceMobileState extends State<ServiceMobile> {
         children: [
           Container(
             width: 30.w,
-            decoration: BoxDecoration(shape: BoxShape.circle, color: bgColor),
+            decoration:
+                const BoxDecoration(shape: BoxShape.circle, color: bgColor),
             child: Image.asset(
               servicesUtils.icon,
             ),
@@ -85,7 +86,7 @@ class _ServiceMobileState extends State<ServiceMobile> {
           ),
           Text(
             servicesUtils.name,
-            style: TextStyle(
+            style: const TextStyle(
                 color: textColor,
                 fontFamily: 'josefinsans',
                 fontSize: 30,
@@ -105,7 +106,7 @@ class _ServiceMobileState extends State<ServiceMobile> {
           SizedBox(
             height: 2.h,
           ),
-          Text(
+          const Text(
             "Read More",
             style: TextStyle(
               color: primaryColor,

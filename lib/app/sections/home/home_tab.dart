@@ -17,7 +17,6 @@ class _HomeTabState extends State<HomeTab> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     return Container(
       color: bgColor,
       child: Padding(

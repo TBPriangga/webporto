@@ -45,8 +45,6 @@ class _NavBarWorkMobileButtonState extends State<NavBarWorkMobileButton> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-
     return Text(
       widget.label,
       style: TextStyle(
