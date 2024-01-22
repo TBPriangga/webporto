@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 import 'package:webportofolio/app/sections/main/main_sections.dart';
+import '../../providers/scroll_provider.dart';
 import 'bloc/connected_bloc.dart';
 
 class NChecking extends StatelessWidget {
@@ -11,11 +13,15 @@ class NChecking extends StatelessWidget {
     return BlocConsumer<ConnectedBloc, ConnectedState>(
       listener: (context, state) {},
       builder: (context, state) {
-        //final scrollProvider = Provider.of<ScrollProvider>(context);
+        final scrollProvider = Provider.of<ScrollProvider>(context);
         if (state is ConnectedSucessState) {
-          return const MainPage();
+          return MainPage(
+            scrollProvider: scrollProvider,
+          );
         } else {
-          return const MainPage();
+          return MainPage(
+            scrollProvider: scrollProvider,
+          );
         }
         // return Container();
       },
