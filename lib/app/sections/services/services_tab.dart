@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:webportofolio/app/utils/services_utils.dart';
@@ -20,7 +22,7 @@ class _ServiceTabState extends State<ServiceTab> {
       padding: EdgeInsets.only(top: 5.h, left: 5.w, right: 5.w),
       child: Column(
         children: [
-          Text(
+          const Text(
             "My Expertise",
             style: TextStyle(
                 color: secondaryColor,
@@ -31,7 +33,7 @@ class _ServiceTabState extends State<ServiceTab> {
           SizedBox(height: 4.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: Text(
+            child: const Text(
               "Provide Wide Range of Digital Services",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -64,7 +66,7 @@ class _ServiceTabState extends State<ServiceTab> {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: bgColor,
               spreadRadius: 60,
@@ -77,7 +79,8 @@ class _ServiceTabState extends State<ServiceTab> {
         children: [
           Container(
             width: 10.w,
-            decoration: BoxDecoration(shape: BoxShape.circle, color: bgColor),
+            decoration:
+                const BoxDecoration(shape: BoxShape.circle, color: bgColor),
             child: Image.asset(
               servicesUtils.icon,
               scale: 2,
@@ -88,7 +91,7 @@ class _ServiceTabState extends State<ServiceTab> {
           ),
           Text(
             servicesUtils.name,
-            style: TextStyle(
+            style: const TextStyle(
                 color: textColor,
                 fontFamily: 'josefinsans',
                 fontSize: 20,
