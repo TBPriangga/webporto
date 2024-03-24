@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:webportofolio/app/sections/portofolio/widget/all_page.dart';
+import 'package:webportofolio/app/sections/portofolio/widget/all_pagetab.dart';
 import 'package:webportofolio/core/color/colors.dart';
 import 'package:webportofolio/widgets/navbar_work_button.dart';
 
-class PortofolioWeb extends StatefulWidget {
-  const PortofolioWeb({super.key});
+class PortofolioTab extends StatefulWidget {
+  const PortofolioTab({super.key});
 
   @override
-  State<PortofolioWeb> createState() => _PortofolioWebState();
+  State<PortofolioTab> createState() => _PortofolioTabState();
 }
 
-class _PortofolioWebState extends State<PortofolioWeb>
+class _PortofolioTabState extends State<PortofolioTab>
     with TickerProviderStateMixin {
   late TabController _tabController;
   final _tabs = [
@@ -35,24 +35,23 @@ class _PortofolioWebState extends State<PortofolioWeb>
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         Container(
-          height: screenWidth < 1300 ? 70.h : 80.h,
+          height: 32.h,
           width: 100.w,
           color: secondaryColor,
           child: Stack(
             children: [
               Positioned(
-                  top: 30.h,
+                  top: 15.h,
                   left: 80.w,
                   child: Image.asset(
                     'assets/imgs/vector.png',
                     scale: 1.5,
                   )),
               Positioned(
-                  bottom: 30.h,
+                  bottom: 15.h,
                   right: 80.w,
                   child: Image.asset(
                     'assets/imgs/vector.png',
@@ -64,7 +63,7 @@ class _PortofolioWebState extends State<PortofolioWeb>
         Column(
           children: [
             SizedBox(
-              height: 10.h,
+              height: 5.h,
             ),
             const Center(
               child: Text(
@@ -80,24 +79,24 @@ class _PortofolioWebState extends State<PortofolioWeb>
               height: 4.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.w),
-              child: Center(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: const Center(
                 child: Text(
                   'Check My Portofolio',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'JoseFinans',
-                      fontSize: screenWidth < 1500 ? 40 : 50,
+                      fontSize: 40,
                       fontWeight: FontWeight.w900),
                 ),
               ),
             ),
             SizedBox(
-              height: 5.h,
+              height: 2.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.w),
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
               child: SizedBox(
                 height: 50.0,
                 child: TabBar(
@@ -113,17 +112,20 @@ class _PortofolioWebState extends State<PortofolioWeb>
               ),
             ),
             SizedBox(
-              height: 5.h,
+              height: 2.h,
             ),
-            SizedBox(
-              height: screenWidth < 1300 ? 80.h : 100.h,
-              child: TabBarView(
-                controller: _tabController,
-                children: [
-                  ...List.generate(5, (index) {
-                    return const AllPage();
-                  })
-                ],
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
+              child: SizedBox(
+                height: 60.w,
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    ...List.generate(5, (index) {
+                      return const AllPageTab();
+                    })
+                  ],
+                ),
               ),
             ),
           ],

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:webportofolio/app/sections/portofolio/widget/all_page.dart';
+import 'package:webportofolio/app/sections/portofolio/widget/all_pagemobile.dart';
 import 'package:webportofolio/core/color/colors.dart';
 import 'package:webportofolio/widgets/navbar_work_button.dart';
 
-class PortofolioWeb extends StatefulWidget {
-  const PortofolioWeb({super.key});
+class PortofolioMobile extends StatefulWidget {
+  const PortofolioMobile({super.key});
 
   @override
-  State<PortofolioWeb> createState() => _PortofolioWebState();
+  State<PortofolioMobile> createState() => _PortofolioMobileState();
 }
 
-class _PortofolioWebState extends State<PortofolioWeb>
+class _PortofolioMobileState extends State<PortofolioMobile>
     with TickerProviderStateMixin {
   late TabController _tabController;
   final _tabs = [
@@ -39,24 +39,24 @@ class _PortofolioWebState extends State<PortofolioWeb>
     return Stack(
       children: [
         Container(
-          height: screenWidth < 1300 ? 70.h : 80.h,
+          height: 50.h,
           width: 100.w,
           color: secondaryColor,
           child: Stack(
             children: [
               Positioned(
-                  top: 30.h,
+                  top: 15.h,
                   left: 80.w,
                   child: Image.asset(
                     'assets/imgs/vector.png',
-                    scale: 1.5,
+                    scale: 2.5,
                   )),
               Positioned(
-                  bottom: 30.h,
+                  bottom: 15.h,
                   right: 80.w,
                   child: Image.asset(
                     'assets/imgs/vector.png',
-                    scale: 1.5,
+                    scale: 2.5,
                   )),
             ],
           ),
@@ -64,7 +64,7 @@ class _PortofolioWebState extends State<PortofolioWeb>
         Column(
           children: [
             SizedBox(
-              height: 10.h,
+              height: 5.h,
             ),
             const Center(
               child: Text(
@@ -72,56 +72,54 @@ class _PortofolioWebState extends State<PortofolioWeb>
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'josefinsans',
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: FontWeight.w600),
               ),
             ),
             SizedBox(
-              height: 4.h,
+              height: 2.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.w),
-              child: Center(
+              padding: EdgeInsets.symmetric(horizontal: 4.w),
+              child: const Center(
                 child: Text(
                   'Check My Portofolio',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'JoseFinans',
-                      fontSize: screenWidth < 1500 ? 40 : 50,
+                      fontSize: 25,
                       fontWeight: FontWeight.w900),
                 ),
               ),
             ),
             SizedBox(
-              height: 5.h,
+              height: 2.h,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.w),
-              child: SizedBox(
-                height: 50.0,
-                child: TabBar(
-                  tabs: _tabs,
-                  controller: _tabController,
-                  labelPadding: const EdgeInsets.all(0),
-                  indicatorSize: TabBarIndicatorSize.label,
-                  labelColor: Colors.white,
-                  indicatorColor: primaryColor,
-                  indicatorWeight: 4,
-                  unselectedLabelColor: Colors.black,
-                ),
+            SizedBox(
+              height: 50,
+              child: TabBar(
+                tabs: _tabs,
+                controller: _tabController,
+                labelPadding: const EdgeInsets.all(4),
+                indicatorSize: TabBarIndicatorSize.label,
+                labelColor: Colors.white,
+                indicatorColor: primaryColor,
+                indicatorWeight: 4,
+                tabAlignment: TabAlignment.center,
+                unselectedLabelColor: Colors.black,
               ),
             ),
             SizedBox(
-              height: 5.h,
+              height: 2.h,
             ),
             SizedBox(
-              height: screenWidth < 1300 ? 80.h : 100.h,
+              height: 170.h,
               child: TabBarView(
                 controller: _tabController,
                 children: [
                   ...List.generate(5, (index) {
-                    return const AllPage();
+                    return const AllPageMobile();
                   })
                 ],
               ),
